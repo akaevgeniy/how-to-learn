@@ -75,7 +75,6 @@
   object-fit: cover;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   height: 568px;
   width: 568px;
@@ -281,7 +280,6 @@
   color: #2f80ed;
   z-index: 8;
 }
-/* и элемента с модификатором вида ключ-значение */
 
 .kaufman {
   background-color: #000;
@@ -300,21 +298,17 @@
   height: 877px;
   z-index: 1;
 }
-.list {
-  list-style: none;
-  padding: 0;
-}
+
 .footer {
   padding: 0;
   min-height: 350px;
   background-color: #000;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
 }
 .footer__columns {
   padding: 0;
-  margin: 60px 40px 0;
+  margin: 60px 0 40px;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -337,9 +331,9 @@
   font-weight: normal;
   color: white;
 }
-
 .footer__column-heading {
   padding: 0;
+  margin-top: 0;
   margin-bottom: 20px;
   line-height: 30px;
   font-size: 18px;
@@ -348,6 +342,9 @@
 }
 .footer__column-links {
   margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .footer__column-link {
   line-height: 30px;
@@ -355,6 +352,16 @@
   font-weight: normal;
   color: white;
   text-decoration: none;
+}
+.footer__column_content_info {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.footer__column_content_social {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 .footer__social-icon {
   width: 16px;
