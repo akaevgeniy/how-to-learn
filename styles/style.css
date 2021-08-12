@@ -38,7 +38,8 @@
   height: 32px;
 }
 .header__title {
-  margin: 0 64px;
+  margin: 0;
+  margin-left: 64px;
   padding: 0;
   width: 730px;
   z-index: 5;
