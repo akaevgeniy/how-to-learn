@@ -204,20 +204,16 @@
   display: flex;
   flex-direction: row;
   margin-top: 50px;
+  height: 256px;
 }
 .video__iframe {
-  width: 516px;
-  height: 256px;
   border: 0;
   border-style: none;
 }
 .video__iframe:first-child {
   margin-right: 20px;
 }
-.video__yout {
-  border: 0;
-  border-style: none;
-}
+
 .oakley {
   padding-top: 160px;
   width: 100%;
