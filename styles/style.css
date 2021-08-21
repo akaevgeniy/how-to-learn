@@ -1,3 +1,11 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -25,6 +33,7 @@
   align-items: center;
   position: relative;
   background-color: #f2f2f2;
+  overflow: hidden;
   /* выше установили ограничения для секции */
 }
 .logo {
@@ -64,6 +73,11 @@
 .header__link {
   color: #2f80ed;
   text-decoration: none;
+  opacity: 1;
+  transition: opacity 1s linear 0.5s;
+}
+.header__link:hover {
+  opacity: 0.5;
 }
 .header__main-illustration {
   width: 765px;
@@ -83,14 +97,20 @@
   top: 64px;
   right: 0;
 }
+.rotation {
+  animation: rotation 20s ease-in-out infinite;
+}
 .description {
   margin-top: 100px;
   margin-bottom: 0;
-  width: 80%;
+
   min-height: 400px;
+  display: flex;
+  justify-content: center;
 }
 
 .two-columns {
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -126,14 +146,165 @@
 .two-columns__span-accent {
   font-weight: bold;
 }
+.techniques {
+  width: 80%;
+  margin: 0 auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cards {
+  display: flex;
+  width: 920px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
+}
+.cards__item {
+  width: 240px;
+  padding: 0;
+  text-align: center;
+  margin-top: 60px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.cards__item:nth-child(3) {
+  margin-right: 0;
+}
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0px 40px 43px;
+}
+.cards__title {
+  color: black;
+  padding: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+.cards__description {
+  color: black;
+  margin-top: 16px;
+  padding: 0;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.video {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.video__iframes {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.video__iframe {
+  width: 516px;
+  height: 256px;
+  border: 0;
+  border-style: none;
+}
+.video__iframe:first-child {
+  margin-right: 20px;
+}
+.video__yout {
+  border: 0;
+  border-style: none;
+}
+.oakley {
+  padding-top: 160px;
+  width: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+
+.khan {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+
+  align-items: center;
+}
+.khan__container {
+  width: 80%;
+}
+.khan__author {
+  margin: 105px 0 0;
+  padding: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+}
+.khan__title {
+  margin: 0;
+  padding: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+}
+.khan__quote {
+  margin: 50px 0 36px;
+  width: 790px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+.khan__quote-author {
+  margin: 0;
+  padding: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+.khan__quote-author-subline {
+  margin: 10px 0 0;
+  padding: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+}
+.khan__book-container {
+  display: flex;
+  margin-top: 68px;
+  align-items: flex-start;
+}
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+
+  margin-right: 48px;
+}
+.khan__buy-link {
+  color: #2f80ed;
+  text-decoration: none;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  opacity: 1;
+  transition: opacity 1s linear 0.5s;
+}
+
+.khan__buy-link:hover {
+  opacity: 0.5;
+}
 .digits {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 0;
 }
 .section-title {
-  margin: 0;
+  margin: 100px 0 0;
+
   padding: 0;
   width: 60%;
   text-align: center;
@@ -283,8 +454,12 @@
   color: #2f80ed;
   text-decoration: none;
   z-index: 8;
+  opacity: 1;
+  transition: opacity 1s linear 0.5s;
 }
-
+.feynman__link:hover {
+  opacity: 0.5;
+}
 .kaufman {
   background-color: #1f1f1f;
   width: 100%;
@@ -303,6 +478,22 @@
   background-image: url(../images/kaufman-triangle.svg);
   background-size: cover;
   z-index: 1;
+}
+.resources {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.resources__logo-zone {
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  margin: 80px auto 217px;
+}
+.resources__logo {
+  width: 270px;
+  height: 38px;
 }
 
 .footer {
@@ -360,6 +551,11 @@
   font-weight: normal;
   color: white;
   text-decoration: none;
+  opacity: 1;
+  transition: opacity 1.2s linear 0.5s;
+}
+.footer__column-link:hover {
+  opacity: 0.3;
 }
 .footer__column_content_info {
   margin: 0;
