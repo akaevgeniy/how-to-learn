@@ -1,6 +1,5 @@
 .video__iframes {
   display: flex;
   flex-direction: row;
-  margin-top: 50px;
-  height: 256px;
+  margin: 0;
 }
